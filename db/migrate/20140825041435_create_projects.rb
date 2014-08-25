@@ -7,6 +7,7 @@ class CreateProjects < ActiveRecord::Migration
       t.boolean :isactive, null: false, default: true
       t.string :url
       t.hstore :miscattributes
+      t.references :main_research_area, index: true
 
       t.timestamps
     end

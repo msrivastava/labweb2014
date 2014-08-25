@@ -5,5 +5,5 @@ class AddHstoreExtension < ActiveRecord::Migration
 
   def down
     execute 'DROP EXTENSION hstore'
-  endw
+  end
 end

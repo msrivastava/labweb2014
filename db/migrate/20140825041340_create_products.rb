@@ -10,6 +10,7 @@ class CreateProducts < ActiveRecord::Migration
       t.boolean :islabproduct, null: false, default: true
       t.hstore :miscattributes
       t.references :product_category, index: true
+      t.references :main_research_area, index: true
 
       t.timestamps
     end

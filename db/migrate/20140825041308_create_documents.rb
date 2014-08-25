@@ -32,6 +32,7 @@ class CreateDocuments < ActiveRecord::Migration
       t.boolean :islabdocument, null: false, default: true
       t.hstore :miscattributes
       t.references :document_category, index: true
+      t.references :main_research_area, index: true
 
       t.timestamps
     end
