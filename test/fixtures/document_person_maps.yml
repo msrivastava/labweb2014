@@ -3,9 +3,9 @@
 one:
   document_id: 
   person_id: 
-  listposition: 1
+  rank: 1
 
 two:
   document_id: 
   person_id: 
-  listposition: 1
+  rank: 1

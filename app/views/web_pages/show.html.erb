@@ -1,13 +1,28 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Title:</strong>
-  <%= @web_page.title %>
+  <strong>Pagetitle:</strong>
+  <%= @web_page.pagetitle %>
+</p>
+
+<p>
+  <strong>Bartitle:</strong>
+  <%= @web_page.bartitle %>
 </p>
 
 <p>
   <strong>Body:</strong>
   <%= @web_page.body %>
+</p>
+
+<p>
+  <strong>Ispublic:</strong>
+  <%= @web_page.ispublic %>
+</p>
+
+<p>
+  <strong>Url:</strong>
+  <%= @web_page.url %>
 </p>
 
 <%= link_to 'Edit', edit_web_page_path(@web_page) %> |

@@ -10,7 +10,7 @@ one:
   islabproduct: false
   miscattributes: 
   product_category_id: 
-  research_area_id: 
+  main_research_area_id: 
 
 two:
   title: MyString
@@ -22,4 +22,4 @@ two:
   islabproduct: false
   miscattributes: 
   product_category_id: 
-  research_area_id: 
+  main_research_area_id: 

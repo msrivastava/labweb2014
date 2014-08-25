@@ -69,6 +69,6 @@ class ProductPersonMapsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def product_person_map_params
-      params.require(:product_person_map).permit(:product_id, :person_id, :listposition)
+      params.require(:product_person_map).permit(:product_id, :person_id, :rank)
     end
 end

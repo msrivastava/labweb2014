@@ -69,6 +69,6 @@ class GrantsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def grant_params
-      params.require(:grant).permit(:name, :description, :url, :startdate, :enddate, :totalawardamount, :fundingagencyname, :awardnumber, :fundingagencyurl, :fundingagencylogourl, :fundingagencygranturl, :programname, :programurl, :miscattributes, :research_area_id)
+      params.require(:grant).permit(:name, :title, :description, :isactive, :url, :startdate, :enddate, :totalawardamount, :fundingagencyname, :awardnumber, :fundingagencyurl, :fundingagencylogourl, :fundingagencygranturl, :programname, :programurl, :miscattributes)
     end
 end

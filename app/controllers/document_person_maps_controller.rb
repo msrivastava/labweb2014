@@ -69,6 +69,6 @@ class DocumentPersonMapsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def document_person_map_params
-      params.require(:document_person_map).permit(:document_id, :person_id, :listposition)
+      params.require(:document_person_map).permit(:document_id, :person_id, :rank)
     end
 end

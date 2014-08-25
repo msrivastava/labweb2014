@@ -2,16 +2,18 @@
 
 one:
   name: MyString
+  title: MyString
   description: MyString
   isactive: false
   url: MyString
   miscattributes: 
-  research_area_id: 
+  main_research_area_id: 
 
 two:
   name: MyString
+  title: MyString
   description: MyString
   isactive: false
   url: MyString
   miscattributes: 
-  research_area_id: 
+  main_research_area_id: 

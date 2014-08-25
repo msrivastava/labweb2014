@@ -18,7 +18,7 @@ class ProjectsControllerTest < ActionController::TestCase
 
   test "should create project" do
     assert_difference('Project.count') do
-      post :create, project: { description: @project.description, isactive: @project.isactive, miscattributes: @project.miscattributes, name: @project.name, research_area_id: @project.research_area_id, url: @project.url }
+      post :create, project: { description: @project.description, isactive: @project.isactive, main_research_area_id: @project.main_research_area_id, miscattributes: @project.miscattributes, name: @project.name, title: @project.title, url: @project.url }
     end
 
     assert_redirected_to project_path(assigns(:project))
@@ -35,7 +35,7 @@ class ProjectsControllerTest < ActionController::TestCase
   end
 
   test "should update project" do
-    patch :update, id: @project, project: { description: @project.description, isactive: @project.isactive, miscattributes: @project.miscattributes, name: @project.name, research_area_id: @project.research_area_id, url: @project.url }
+    patch :update, id: @project, project: { description: @project.description, isactive: @project.isactive, main_research_area_id: @project.main_research_area_id, miscattributes: @project.miscattributes, name: @project.name, title: @project.title, url: @project.url }
     assert_redirected_to project_path(assigns(:project))
   end
 

@@ -69,6 +69,6 @@ class PersonCategoriesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def person_category_params
-      params.require(:person_category).permit(:name)
+      params.require(:person_category).permit(:name, :relationship_distance)
     end
 end

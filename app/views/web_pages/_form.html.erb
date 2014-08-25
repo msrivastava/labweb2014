@@ -12,12 +12,24 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :title %><br>
-    <%= f.text_field :title %>
+    <%= f.label :pagetitle %><br>
+    <%= f.text_field :pagetitle %>
+  </div>
+  <div class="field">
+    <%= f.label :bartitle %><br>
+    <%= f.text_field :bartitle %>
   </div>
   <div class="field">
     <%= f.label :body %><br>
     <%= f.text_area :body %>
+  </div>
+  <div class="field">
+    <%= f.label :ispublic %><br>
+    <%= f.check_box :ispublic %>
+  </div>
+  <div class="field">
+    <%= f.label :url %><br>
+    <%= f.text_field :url %>
   </div>
   <div class="actions">
     <%= f.submit %>

@@ -18,7 +18,7 @@ class GrantsControllerTest < ActionController::TestCase
 
   test "should create grant" do
     assert_difference('Grant.count') do
-      post :create, grant: { awardnumber: @grant.awardnumber, description: @grant.description, enddate: @grant.enddate, fundingagencygranturl: @grant.fundingagencygranturl, fundingagencylogourl: @grant.fundingagencylogourl, fundingagencyname: @grant.fundingagencyname, fundingagencyurl: @grant.fundingagencyurl, miscattributes: @grant.miscattributes, name: @grant.name, programname: @grant.programname, programurl: @grant.programurl, research_area_id: @grant.research_area_id, startdate: @grant.startdate, totalawardamount: @grant.totalawardamount, url: @grant.url }
+      post :create, grant: { awardnumber: @grant.awardnumber, description: @grant.description, enddate: @grant.enddate, fundingagencygranturl: @grant.fundingagencygranturl, fundingagencylogourl: @grant.fundingagencylogourl, fundingagencyname: @grant.fundingagencyname, fundingagencyurl: @grant.fundingagencyurl, isactive: @grant.isactive, miscattributes: @grant.miscattributes, name: @grant.name, programname: @grant.programname, programurl: @grant.programurl, startdate: @grant.startdate, title: @grant.title, totalawardamount: @grant.totalawardamount, url: @grant.url }
     end
 
     assert_redirected_to grant_path(assigns(:grant))
@@ -35,7 +35,7 @@ class GrantsControllerTest < ActionController::TestCase
   end
 
   test "should update grant" do
-    patch :update, id: @grant, grant: { awardnumber: @grant.awardnumber, description: @grant.description, enddate: @grant.enddate, fundingagencygranturl: @grant.fundingagencygranturl, fundingagencylogourl: @grant.fundingagencylogourl, fundingagencyname: @grant.fundingagencyname, fundingagencyurl: @grant.fundingagencyurl, miscattributes: @grant.miscattributes, name: @grant.name, programname: @grant.programname, programurl: @grant.programurl, research_area_id: @grant.research_area_id, startdate: @grant.startdate, totalawardamount: @grant.totalawardamount, url: @grant.url }
+    patch :update, id: @grant, grant: { awardnumber: @grant.awardnumber, description: @grant.description, enddate: @grant.enddate, fundingagencygranturl: @grant.fundingagencygranturl, fundingagencylogourl: @grant.fundingagencylogourl, fundingagencyname: @grant.fundingagencyname, fundingagencyurl: @grant.fundingagencyurl, isactive: @grant.isactive, miscattributes: @grant.miscattributes, name: @grant.name, programname: @grant.programname, programurl: @grant.programurl, startdate: @grant.startdate, title: @grant.title, totalawardamount: @grant.totalawardamount, url: @grant.url }
     assert_redirected_to grant_path(assigns(:grant))
   end
 

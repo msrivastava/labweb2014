@@ -18,7 +18,7 @@ class ProductsControllerTest < ActionController::TestCase
 
   test "should create product" do
     assert_difference('Product.count') do
-      post :create, product: { description: @product.description, islabproduct: @product.islabproduct, ispublic: @product.ispublic, miscattributes: @product.miscattributes, month: @product.month, product_category_id: @product.product_category_id, research_area_id: @product.research_area_id, title: @product.title, url: @product.url, year: @product.year }
+      post :create, product: { description: @product.description, islabproduct: @product.islabproduct, ispublic: @product.ispublic, main_research_area_id: @product.main_research_area_id, miscattributes: @product.miscattributes, month: @product.month, product_category_id: @product.product_category_id, title: @product.title, url: @product.url, year: @product.year }
     end
 
     assert_redirected_to product_path(assigns(:product))
@@ -35,7 +35,7 @@ class ProductsControllerTest < ActionController::TestCase
   end
 
   test "should update product" do
-    patch :update, id: @product, product: { description: @product.description, islabproduct: @product.islabproduct, ispublic: @product.ispublic, miscattributes: @product.miscattributes, month: @product.month, product_category_id: @product.product_category_id, research_area_id: @product.research_area_id, title: @product.title, url: @product.url, year: @product.year }
+    patch :update, id: @product, product: { description: @product.description, islabproduct: @product.islabproduct, ispublic: @product.ispublic, main_research_area_id: @product.main_research_area_id, miscattributes: @product.miscattributes, month: @product.month, product_category_id: @product.product_category_id, title: @product.title, url: @product.url, year: @product.year }
     assert_redirected_to product_path(assigns(:product))
   end
 

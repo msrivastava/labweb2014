@@ -6,8 +6,18 @@
 </p>
 
 <p>
+  <strong>Title:</strong>
+  <%= @grant.title %>
+</p>
+
+<p>
   <strong>Description:</strong>
   <%= @grant.description %>
+</p>
+
+<p>
+  <strong>Isactive:</strong>
+  <%= @grant.isactive %>
 </p>
 
 <p>
@@ -68,11 +78,6 @@
 <p>
   <strong>Miscattributes:</strong>
   <%= @grant.miscattributes %>
-</p>
-
-<p>
-  <strong>Research area:</strong>
-  <%= @grant.research_area %>
 </p>
 
 <%= link_to 'Edit', edit_grant_path(@grant) %> |

@@ -4,11 +4,12 @@
   <thead>
     <tr>
       <th>Name</th>
+      <th>Title</th>
       <th>Description</th>
       <th>Isactive</th>
       <th>Url</th>
       <th>Miscattributes</th>
-      <th>Research area</th>
+      <th>Main research area</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -17,11 +18,12 @@
     <% @projects.each do |project| %>
       <tr>
         <td><%= project.name %></td>
+        <td><%= project.title %></td>
         <td><%= project.description %></td>
         <td><%= project.isactive %></td>
         <td><%= project.url %></td>
         <td><%= project.miscattributes %></td>
-        <td><%= project.research_area %></td>
+        <td><%= project.main_research_area %></td>
         <td><%= link_to 'Show', project %></td>
         <td><%= link_to 'Edit', edit_project_path(project) %></td>
         <td><%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %></td>

@@ -69,6 +69,6 @@ class WebPagesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def web_page_params
-      params.require(:web_page).permit(:title, :body)
+      params.require(:web_page).permit(:pagetitle, :bartitle, :body, :ispublic, :url)
     end
 end

@@ -24,15 +24,15 @@ one:
   pubpagefirst: MyString
   pubpagelast: MyString
   pubpagecount: MyString
-  pubdate: 2014-08-24
-  pubdate_end: 2014-08-24
+  pubdate: 2014-08-25
+  pubdate_end: 2014-08-25
   pubplace: MyString
   publisher: MyString
   ispublic: false
   islabdocument: false
   miscattributes: 
   document_category_id: 
-  research_area_id: 
+  main_research_area_id: 
 
 two:
   tryear: 1
@@ -58,12 +58,12 @@ two:
   pubpagefirst: MyString
   pubpagelast: MyString
   pubpagecount: MyString
-  pubdate: 2014-08-24
-  pubdate_end: 2014-08-24
+  pubdate: 2014-08-25
+  pubdate_end: 2014-08-25
   pubplace: MyString
   publisher: MyString
   ispublic: false
   islabdocument: false
   miscattributes: 
   document_category_id: 
-  research_area_id: 
+  main_research_area_id: 

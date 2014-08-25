@@ -34,7 +34,7 @@
       <th>Islabdocument</th>
       <th>Miscattributes</th>
       <th>Document category</th>
-      <th>Research area</th>
+      <th>Main research area</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -73,7 +73,7 @@
         <td><%= document.islabdocument %></td>
         <td><%= document.miscattributes %></td>
         <td><%= document.document_category %></td>
-        <td><%= document.research_area %></td>
+        <td><%= document.main_research_area %></td>
         <td><%= link_to 'Show', document %></td>
         <td><%= link_to 'Edit', edit_document_path(document) %></td>
         <td><%= link_to 'Destroy', document, method: :delete, data: { confirm: 'Are you sure?' } %></td>

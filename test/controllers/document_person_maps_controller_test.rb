@@ -18,7 +18,7 @@ class DocumentPersonMapsControllerTest < ActionController::TestCase
 
   test "should create document_person_map" do
     assert_difference('DocumentPersonMap.count') do
-      post :create, document_person_map: { document_id: @document_person_map.document_id, listposition: @document_person_map.listposition, person_id: @document_person_map.person_id }
+      post :create, document_person_map: { document_id: @document_person_map.document_id, person_id: @document_person_map.person_id, rank: @document_person_map.rank }
     end
 
     assert_redirected_to document_person_map_path(assigns(:document_person_map))
@@ -35,7 +35,7 @@ class DocumentPersonMapsControllerTest < ActionController::TestCase
   end
 
   test "should update document_person_map" do
-    patch :update, id: @document_person_map, document_person_map: { document_id: @document_person_map.document_id, listposition: @document_person_map.listposition, person_id: @document_person_map.person_id }
+    patch :update, id: @document_person_map, document_person_map: { document_id: @document_person_map.document_id, person_id: @document_person_map.person_id, rank: @document_person_map.rank }
     assert_redirected_to document_person_map_path(assigns(:document_person_map))
   end
 

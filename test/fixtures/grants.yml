@@ -2,10 +2,12 @@
 
 one:
   name: MyString
+  title: MyString
   description: MyString
+  isactive: false
   url: MyString
-  startdate: 2014-08-24
-  enddate: 2014-08-24
+  startdate: 2014-08-25
+  enddate: 2014-08-25
   totalawardamount: 1
   fundingagencyname: MyString
   awardnumber: MyString
@@ -15,14 +17,15 @@ one:
   programname: MyString
   programurl: MyString
   miscattributes: 
-  research_area_id: 
 
 two:
   name: MyString
+  title: MyString
   description: MyString
+  isactive: false
   url: MyString
-  startdate: 2014-08-24
-  enddate: 2014-08-24
+  startdate: 2014-08-25
+  enddate: 2014-08-25
   totalawardamount: 1
   fundingagencyname: MyString
   awardnumber: MyString
@@ -32,4 +35,3 @@ two:
   programname: MyString
   programurl: MyString
   miscattributes: 
-  research_area_id: 

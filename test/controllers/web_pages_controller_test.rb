@@ -18,7 +18,7 @@ class WebPagesControllerTest < ActionController::TestCase
 
   test "should create web_page" do
     assert_difference('WebPage.count') do
-      post :create, web_page: { body: @web_page.body, title: @web_page.title }
+      post :create, web_page: { bartitle: @web_page.bartitle, body: @web_page.body, ispublic: @web_page.ispublic, pagetitle: @web_page.pagetitle, url: @web_page.url }
     end
 
     assert_redirected_to web_page_path(assigns(:web_page))
@@ -35,7 +35,7 @@ class WebPagesControllerTest < ActionController::TestCase
   end
 
   test "should update web_page" do
-    patch :update, id: @web_page, web_page: { body: @web_page.body, title: @web_page.title }
+    patch :update, id: @web_page, web_page: { bartitle: @web_page.bartitle, body: @web_page.body, ispublic: @web_page.ispublic, pagetitle: @web_page.pagetitle, url: @web_page.url }
     assert_redirected_to web_page_path(assigns(:web_page))
   end
 

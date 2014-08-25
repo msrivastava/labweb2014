@@ -18,7 +18,7 @@ class ProductPersonMapsControllerTest < ActionController::TestCase
 
   test "should create product_person_map" do
     assert_difference('ProductPersonMap.count') do
-      post :create, product_person_map: { listposition: @product_person_map.listposition, person_id: @product_person_map.person_id, product_id: @product_person_map.product_id }
+      post :create, product_person_map: { person_id: @product_person_map.person_id, product_id: @product_person_map.product_id, rank: @product_person_map.rank }
     end
 
     assert_redirected_to product_person_map_path(assigns(:product_person_map))
@@ -35,7 +35,7 @@ class ProductPersonMapsControllerTest < ActionController::TestCase
   end
 
   test "should update product_person_map" do
-    patch :update, id: @product_person_map, product_person_map: { listposition: @product_person_map.listposition, person_id: @product_person_map.person_id, product_id: @product_person_map.product_id }
+    patch :update, id: @product_person_map, product_person_map: { person_id: @product_person_map.person_id, product_id: @product_person_map.product_id, rank: @product_person_map.rank }
     assert_redirected_to product_person_map_path(assigns(:product_person_map))
   end
 

@@ -2,6 +2,8 @@
 
 one:
   name: MyString
+  relationship_distance: 1
 
 two:
   name: MyString
+  relationship_distance: 1

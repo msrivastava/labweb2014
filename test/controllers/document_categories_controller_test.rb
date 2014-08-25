@@ -18,7 +18,7 @@ class DocumentCategoriesControllerTest < ActionController::TestCase
 
   test "should create document_category" do
     assert_difference('DocumentCategory.count') do
-      post :create, document_category: { name: @document_category.name }
+      post :create, document_category: { name: @document_category.name, priority: @document_category.priority }
     end
 
     assert_redirected_to document_category_path(assigns(:document_category))
@@ -35,7 +35,7 @@ class DocumentCategoriesControllerTest < ActionController::TestCase
   end
 
   test "should update document_category" do
-    patch :update, id: @document_category, document_category: { name: @document_category.name }
+    patch :update, id: @document_category, document_category: { name: @document_category.name, priority: @document_category.priority }
     assert_redirected_to document_category_path(assigns(:document_category))
   end
 

@@ -1,3 +1,3 @@
 class Course < ActiveRecord::Base
-  has_many: course_offerings
+  has_many :course_offerings
 end

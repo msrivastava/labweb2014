@@ -4,7 +4,9 @@
   <thead>
     <tr>
       <th>Name</th>
+      <th>Title</th>
       <th>Description</th>
+      <th>Isactive</th>
       <th>Url</th>
       <th>Startdate</th>
       <th>Enddate</th>
@@ -17,7 +19,6 @@
       <th>Programname</th>
       <th>Programurl</th>
       <th>Miscattributes</th>
-      <th>Research area</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -26,7 +27,9 @@
     <% @grants.each do |grant| %>
       <tr>
         <td><%= grant.name %></td>
+        <td><%= grant.title %></td>
         <td><%= grant.description %></td>
+        <td><%= grant.isactive %></td>
         <td><%= grant.url %></td>
         <td><%= grant.startdate %></td>
         <td><%= grant.enddate %></td>
@@ -39,7 +42,6 @@
         <td><%= grant.programname %></td>
         <td><%= grant.programurl %></td>
         <td><%= grant.miscattributes %></td>
-        <td><%= grant.research_area %></td>
         <td><%= link_to 'Show', grant %></td>
         <td><%= link_to 'Edit', edit_grant_path(grant) %></td>
         <td><%= link_to 'Destroy', grant, method: :delete, data: { confirm: 'Are you sure?' } %></td>

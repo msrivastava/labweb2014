@@ -1,9 +1,15 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  title: MyString
+  pagetitle: MyString
+  bartitle: MyString
   body: MyText
+  ispublic: false
+  url: MyString
 
 two:
-  title: MyString
+  pagetitle: MyString
+  bartitle: MyString
   body: MyText
+  ispublic: false
+  url: MyString

@@ -1,4 +1,4 @@
-wclass ResearchAreasController < ApplicationController
+class ResearchAreasController < ApplicationController
   before_action :set_research_area, only: [:show, :edit, :update, :destroy]
 
   # GET /research_areas
