@@ -1,0 +1,35 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  description: MyString
+  url: MyString
+  startdate: 2014-08-24
+  enddate: 2014-08-24
+  totalawardamount: 1
+  fundingagencyname: MyString
+  awardnumber: MyString
+  fundingagencyurl: MyString
+  fundingagencylogourl: MyString
+  fundingagencygranturl: MyString
+  programname: MyString
+  programurl: MyString
+  miscattributes: 
+  research_area_id: 
+
+two:
+  name: MyString
+  description: MyString
+  url: MyString
+  startdate: 2014-08-24
+  enddate: 2014-08-24
+  totalawardamount: 1
+  fundingagencyname: MyString
+  awardnumber: MyString
+  fundingagencyurl: MyString
+  fundingagencylogourl: MyString
+  fundingagencygranturl: MyString
+  programname: MyString
+  programurl: MyString
+  miscattributes: 
+  research_area_id: 

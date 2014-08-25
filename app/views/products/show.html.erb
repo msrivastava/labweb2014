@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @product.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @product.description %>
+</p>
+
+<p>
+  <strong>Year:</strong>
+  <%= @product.year %>
+</p>
+
+<p>
+  <strong>Month:</strong>
+  <%= @product.month %>
+</p>
+
+<p>
+  <strong>Url:</strong>
+  <%= @product.url %>
+</p>
+
+<p>
+  <strong>Ispublic:</strong>
+  <%= @product.ispublic %>
+</p>
+
+<p>
+  <strong>Islabproduct:</strong>
+  <%= @product.islabproduct %>
+</p>
+
+<p>
+  <strong>Miscattributes:</strong>
+  <%= @product.miscattributes %>
+</p>
+
+<p>
+  <strong>Product category:</strong>
+  <%= @product.product_category %>
+</p>
+
+<p>
+  <strong>Research area:</strong>
+  <%= @product.research_area %>
+</p>
+
+<%= link_to 'Edit', edit_product_path(@product) %> |
+<%= link_to 'Back', products_path %>

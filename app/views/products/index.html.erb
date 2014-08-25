@@ -1,0 +1,43 @@
+<h1>Listing products</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Description</th>
+      <th>Year</th>
+      <th>Month</th>
+      <th>Url</th>
+      <th>Ispublic</th>
+      <th>Islabproduct</th>
+      <th>Miscattributes</th>
+      <th>Product category</th>
+      <th>Research area</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @products.each do |product| %>
+      <tr>
+        <td><%= product.title %></td>
+        <td><%= product.description %></td>
+        <td><%= product.year %></td>
+        <td><%= product.month %></td>
+        <td><%= product.url %></td>
+        <td><%= product.ispublic %></td>
+        <td><%= product.islabproduct %></td>
+        <td><%= product.miscattributes %></td>
+        <td><%= product.product_category %></td>
+        <td><%= product.research_area %></td>
+        <td><%= link_to 'Show', product %></td>
+        <td><%= link_to 'Edit', edit_product_path(product) %></td>
+        <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Product', new_product_path %>

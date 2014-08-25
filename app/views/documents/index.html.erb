@@ -1,0 +1,87 @@
+<h1>Listing documents</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Tryear</th>
+      <th>Trmonth</th>
+      <th>Trnumber</th>
+      <th>Title</th>
+      <th>Abstract</th>
+      <th>Filename</th>
+      <th>File</th>
+      <th>Urlpdfpaper</th>
+      <th>Urlsrcpaper</th>
+      <th>Urlpdfpresentation</th>
+      <th>Urlsrcpresentation</th>
+      <th>Urlavmedia</th>
+      <th>Urldoi</th>
+      <th>Urlpublisher</th>
+      <th>Urlgooglescholar</th>
+      <th>Urlciteseer</th>
+      <th>Pubin</th>
+      <th>Pubvol</th>
+      <th>Pubnum</th>
+      <th>Pubnum end</th>
+      <th>Pubpagefirst</th>
+      <th>Pubpagelast</th>
+      <th>Pubpagecount</th>
+      <th>Pubdate</th>
+      <th>Pubdate end</th>
+      <th>Pubplace</th>
+      <th>Publisher</th>
+      <th>Ispublic</th>
+      <th>Islabdocument</th>
+      <th>Miscattributes</th>
+      <th>Document category</th>
+      <th>Research area</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @documents.each do |document| %>
+      <tr>
+        <td><%= document.tryear %></td>
+        <td><%= document.trmonth %></td>
+        <td><%= document.trnumber %></td>
+        <td><%= document.title %></td>
+        <td><%= document.abstract %></td>
+        <td><%= document.filename %></td>
+        <td><%= document.file %></td>
+        <td><%= document.urlpdfpaper %></td>
+        <td><%= document.urlsrcpaper %></td>
+        <td><%= document.urlpdfpresentation %></td>
+        <td><%= document.urlsrcpresentation %></td>
+        <td><%= document.urlavmedia %></td>
+        <td><%= document.urldoi %></td>
+        <td><%= document.urlpublisher %></td>
+        <td><%= document.urlgooglescholar %></td>
+        <td><%= document.urlciteseer %></td>
+        <td><%= document.pubin %></td>
+        <td><%= document.pubvol %></td>
+        <td><%= document.pubnum %></td>
+        <td><%= document.pubnum_end %></td>
+        <td><%= document.pubpagefirst %></td>
+        <td><%= document.pubpagelast %></td>
+        <td><%= document.pubpagecount %></td>
+        <td><%= document.pubdate %></td>
+        <td><%= document.pubdate_end %></td>
+        <td><%= document.pubplace %></td>
+        <td><%= document.publisher %></td>
+        <td><%= document.ispublic %></td>
+        <td><%= document.islabdocument %></td>
+        <td><%= document.miscattributes %></td>
+        <td><%= document.document_category %></td>
+        <td><%= document.research_area %></td>
+        <td><%= link_to 'Show', document %></td>
+        <td><%= link_to 'Edit', edit_document_path(document) %></td>
+        <td><%= link_to 'Destroy', document, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Document', new_document_path %>

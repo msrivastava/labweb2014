@@ -1,0 +1,101 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  lastname: MyString
+  firstname: MyString
+  middleinitial: MyString
+  webname: MyString
+  email: MyString
+  url: MyString
+  urlphoto: MyString
+  phonework: MyString
+  phonehome: MyString
+  phonecell: MyString
+  fax: MyString
+  addressoffice: MyString
+  addresslab: MyString
+  addressmail: MyString
+  department: MyString
+  urldepartment: MyString
+  organization: MyString
+  urlorganization: MyString
+  biography: MyText
+  researchinterests: MyText
+  education: MyText
+  professionalexperience: MyText
+  professionalservice: MyText
+  otherpublications: MyText
+  patents: MyText
+  awards: MyText
+  skills: MyText
+  interests: MyText
+  secretary: MyText
+  bs_year: 1
+  bs_title: MyString
+  bs_school: MyString
+  bs_field: MyString
+  bs_in_lab: false
+  ms_year: 1
+  ms_title: MyString
+  ms_school: MyString
+  ms_field: MyString
+  ms_thesis: MyString
+  ms_in_lab: false
+  phd_year: 1
+  phd_title: MyString
+  phd_school: MyString
+  phd_field: MyString
+  phd_thesis: MyString
+  phd_in_lab: false
+  miscattributes: 
+  person_category_id: 
+
+two:
+  lastname: MyString
+  firstname: MyString
+  middleinitial: MyString
+  webname: MyString
+  email: MyString
+  url: MyString
+  urlphoto: MyString
+  phonework: MyString
+  phonehome: MyString
+  phonecell: MyString
+  fax: MyString
+  addressoffice: MyString
+  addresslab: MyString
+  addressmail: MyString
+  department: MyString
+  urldepartment: MyString
+  organization: MyString
+  urlorganization: MyString
+  biography: MyText
+  researchinterests: MyText
+  education: MyText
+  professionalexperience: MyText
+  professionalservice: MyText
+  otherpublications: MyText
+  patents: MyText
+  awards: MyText
+  skills: MyText
+  interests: MyText
+  secretary: MyText
+  bs_year: 1
+  bs_title: MyString
+  bs_school: MyString
+  bs_field: MyString
+  bs_in_lab: false
+  ms_year: 1
+  ms_title: MyString
+  ms_school: MyString
+  ms_field: MyString
+  ms_thesis: MyString
+  ms_in_lab: false
+  phd_year: 1
+  phd_title: MyString
+  phd_school: MyString
+  phd_field: MyString
+  phd_thesis: MyString
+  phd_in_lab: false
+  miscattributes: 
+  person_category_id: 

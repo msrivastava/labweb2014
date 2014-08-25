@@ -1,0 +1,69 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  tryear: 1
+  trmonth: 1
+  trnumber: 1
+  title: MyString
+  abstract: MyText
+  filename: MyString
+  file: 
+  urlpdfpaper: MyString
+  urlsrcpaper: MyString
+  urlpdfpresentation: MyString
+  urlsrcpresentation: MyString
+  urlavmedia: MyString
+  urldoi: MyString
+  urlpublisher: MyString
+  urlgooglescholar: MyString
+  urlciteseer: MyString
+  pubin: MyString
+  pubvol: MyString
+  pubnum: MyString
+  pubnum_end: MyString
+  pubpagefirst: MyString
+  pubpagelast: MyString
+  pubpagecount: MyString
+  pubdate: 2014-08-24
+  pubdate_end: 2014-08-24
+  pubplace: MyString
+  publisher: MyString
+  ispublic: false
+  islabdocument: false
+  miscattributes: 
+  document_category_id: 
+  research_area_id: 
+
+two:
+  tryear: 1
+  trmonth: 1
+  trnumber: 1
+  title: MyString
+  abstract: MyText
+  filename: MyString
+  file: 
+  urlpdfpaper: MyString
+  urlsrcpaper: MyString
+  urlpdfpresentation: MyString
+  urlsrcpresentation: MyString
+  urlavmedia: MyString
+  urldoi: MyString
+  urlpublisher: MyString
+  urlgooglescholar: MyString
+  urlciteseer: MyString
+  pubin: MyString
+  pubvol: MyString
+  pubnum: MyString
+  pubnum_end: MyString
+  pubpagefirst: MyString
+  pubpagelast: MyString
+  pubpagecount: MyString
+  pubdate: 2014-08-24
+  pubdate_end: 2014-08-24
+  pubplace: MyString
+  publisher: MyString
+  ispublic: false
+  islabdocument: false
+  miscattributes: 
+  document_category_id: 
+  research_area_id: 

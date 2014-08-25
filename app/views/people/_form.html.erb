@@ -1,0 +1,209 @@
+<%= form_for(@person) do |f| %>
+  <% if @person.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@person.errors.count, "error") %> prohibited this person from being saved:</h2>
+
+      <ul>
+      <% @person.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :lastname %><br>
+    <%= f.text_field :lastname %>
+  </div>
+  <div class="field">
+    <%= f.label :firstname %><br>
+    <%= f.text_field :firstname %>
+  </div>
+  <div class="field">
+    <%= f.label :middleinitial %><br>
+    <%= f.text_field :middleinitial %>
+  </div>
+  <div class="field">
+    <%= f.label :webname %><br>
+    <%= f.text_field :webname %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br>
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :url %><br>
+    <%= f.text_field :url %>
+  </div>
+  <div class="field">
+    <%= f.label :urlphoto %><br>
+    <%= f.text_field :urlphoto %>
+  </div>
+  <div class="field">
+    <%= f.label :phonework %><br>
+    <%= f.text_field :phonework %>
+  </div>
+  <div class="field">
+    <%= f.label :phonehome %><br>
+    <%= f.text_field :phonehome %>
+  </div>
+  <div class="field">
+    <%= f.label :phonecell %><br>
+    <%= f.text_field :phonecell %>
+  </div>
+  <div class="field">
+    <%= f.label :fax %><br>
+    <%= f.text_field :fax %>
+  </div>
+  <div class="field">
+    <%= f.label :addressoffice %><br>
+    <%= f.text_field :addressoffice %>
+  </div>
+  <div class="field">
+    <%= f.label :addresslab %><br>
+    <%= f.text_field :addresslab %>
+  </div>
+  <div class="field">
+    <%= f.label :addressmail %><br>
+    <%= f.text_field :addressmail %>
+  </div>
+  <div class="field">
+    <%= f.label :department %><br>
+    <%= f.text_field :department %>
+  </div>
+  <div class="field">
+    <%= f.label :urldepartment %><br>
+    <%= f.text_field :urldepartment %>
+  </div>
+  <div class="field">
+    <%= f.label :organization %><br>
+    <%= f.text_field :organization %>
+  </div>
+  <div class="field">
+    <%= f.label :urlorganization %><br>
+    <%= f.text_field :urlorganization %>
+  </div>
+  <div class="field">
+    <%= f.label :biography %><br>
+    <%= f.text_area :biography %>
+  </div>
+  <div class="field">
+    <%= f.label :researchinterests %><br>
+    <%= f.text_area :researchinterests %>
+  </div>
+  <div class="field">
+    <%= f.label :education %><br>
+    <%= f.text_area :education %>
+  </div>
+  <div class="field">
+    <%= f.label :professionalexperience %><br>
+    <%= f.text_area :professionalexperience %>
+  </div>
+  <div class="field">
+    <%= f.label :professionalservice %><br>
+    <%= f.text_area :professionalservice %>
+  </div>
+  <div class="field">
+    <%= f.label :otherpublications %><br>
+    <%= f.text_area :otherpublications %>
+  </div>
+  <div class="field">
+    <%= f.label :patents %><br>
+    <%= f.text_area :patents %>
+  </div>
+  <div class="field">
+    <%= f.label :awards %><br>
+    <%= f.text_area :awards %>
+  </div>
+  <div class="field">
+    <%= f.label :skills %><br>
+    <%= f.text_area :skills %>
+  </div>
+  <div class="field">
+    <%= f.label :interests %><br>
+    <%= f.text_area :interests %>
+  </div>
+  <div class="field">
+    <%= f.label :secretary %><br>
+    <%= f.text_area :secretary %>
+  </div>
+  <div class="field">
+    <%= f.label :bs_year %><br>
+    <%= f.number_field :bs_year %>
+  </div>
+  <div class="field">
+    <%= f.label :bs_title %><br>
+    <%= f.text_field :bs_title %>
+  </div>
+  <div class="field">
+    <%= f.label :bs_school %><br>
+    <%= f.text_field :bs_school %>
+  </div>
+  <div class="field">
+    <%= f.label :bs_field %><br>
+    <%= f.text_field :bs_field %>
+  </div>
+  <div class="field">
+    <%= f.label :bs_in_lab %><br>
+    <%= f.check_box :bs_in_lab %>
+  </div>
+  <div class="field">
+    <%= f.label :ms_year %><br>
+    <%= f.number_field :ms_year %>
+  </div>
+  <div class="field">
+    <%= f.label :ms_title %><br>
+    <%= f.text_field :ms_title %>
+  </div>
+  <div class="field">
+    <%= f.label :ms_school %><br>
+    <%= f.text_field :ms_school %>
+  </div>
+  <div class="field">
+    <%= f.label :ms_field %><br>
+    <%= f.text_field :ms_field %>
+  </div>
+  <div class="field">
+    <%= f.label :ms_thesis %><br>
+    <%= f.text_field :ms_thesis %>
+  </div>
+  <div class="field">
+    <%= f.label :ms_in_lab %><br>
+    <%= f.check_box :ms_in_lab %>
+  </div>
+  <div class="field">
+    <%= f.label :phd_year %><br>
+    <%= f.number_field :phd_year %>
+  </div>
+  <div class="field">
+    <%= f.label :phd_title %><br>
+    <%= f.text_field :phd_title %>
+  </div>
+  <div class="field">
+    <%= f.label :phd_school %><br>
+    <%= f.text_field :phd_school %>
+  </div>
+  <div class="field">
+    <%= f.label :phd_field %><br>
+    <%= f.text_field :phd_field %>
+  </div>
+  <div class="field">
+    <%= f.label :phd_thesis %><br>
+    <%= f.text_field :phd_thesis %>
+  </div>
+  <div class="field">
+    <%= f.label :phd_in_lab %><br>
+    <%= f.check_box :phd_in_lab %>
+  </div>
+  <div class="field">
+    <%= f.label :miscattributes %><br>
+    <%= f.text_field :miscattributes %>
+  </div>
+  <div class="field">
+    <%= f.label :person_category_id %><br>
+    <%= f.text_field :person_category_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
