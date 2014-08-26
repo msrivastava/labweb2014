@@ -1,0 +1,13 @@
+# config/application.local.yml
+
+defaults: &defaults
+  LABNAME: "Networked and Embedded Systems Laboratory"
+  LABACRONYM: "NESL"
+  UNIVNAME: "University of California, Los Angeles"
+  UNIVACRONYM: "UCLA"
+
+development:
+  <<: *defaults
+
+test:
+  <<: *defaults
