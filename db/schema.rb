@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140825044650) do
+ActiveRecord::Schema.define(version: 20140826050528) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -151,6 +151,13 @@ ActiveRecord::Schema.define(version: 20140825044650) do
   create_table "grants_research_areas", id: false, force: true do |t|
     t.integer "grant_id"
     t.integer "research_area_id"
+  end
+
+  create_table "homes", force: true do |t|
+    t.text     "labintromessage"
+    t.hstore   "miscattributes"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "news_events", force: true do |t|

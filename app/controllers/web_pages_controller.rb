@@ -7,6 +7,10 @@ class WebPagesController < ApplicationController
     @web_pages = WebPage.all
   end
 
+  def home
+    @web_page = WebPage.find(1)
+  end
+
   # GET /web_pages/1
   # GET /web_pages/1.json
   def show

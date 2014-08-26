@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  get '/home'    => 'web_pages#show', id: 1
+  get '/privacy'    => 'web_pages#show', id: 2
+  get '/terms'    => 'web_pages#show', id: 3
+  get '/about'    => 'web_pages#show', id: 4
+
   resources :product_person_maps
 
   resources :document_person_maps
@@ -33,7 +38,7 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  # root 'welcome#index'
+  root 'web_pages#home'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

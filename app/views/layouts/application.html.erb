@@ -1,14 +1,82 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Labweb2014b</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="<%= ENV["META_DESCRIPTION"] %>">
+  <meta name="author" content="<%= ENV["META_AUTHOR"] %>">
+  <meta name="Keywords" content="<%= ENV["META_KEYWORDS"] %>">
+  <title><%= full_title(yield(:title)) %></title>
+  <link href="//netdna.bootstrapcdn.com/bootstrap/<%= ENV["BOOTSTRAP_VERSION"] %>/css/bootstrap.min.css" rel="stylesheet">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+  <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+  <![endif]-->
+
+  <a href="#Top"></a>
 </head>
 <body>
 
+<div class="navbar navbar-fixed-top navbar-inverse" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <%= link_to ENV["LABACRONYM"], root_path, :class => "navbar-brand" %>
+    </div>
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav pull-right">
+        <li class="<%= 'active' if current_page?(root_path) %>"><%= link_to "Home", root_path %></li>
+        <li class="<%= 'active' if current_page?(people_path) %>"><%= link_to "People", people_path %></li>
+        <li class="<%= 'active' if current_page?(projects_path) %>"><%= link_to "Projects", projects_path %></li>
+        <li class="<%= 'active' if current_page?(documents_path) %>"><%= link_to "Documents", documents_path %></li>
+        <li class="<%= 'active' if current_page?(products_path) %>"><%= link_to "Products", products_path %></li>
+      </ul>
+    </div><!-- /.nav-collapse -->
+  </div><!-- /.container -->
+</div><!-- /.navbar -->
+
+
+<% if current_page?(root_path) %>
+    <% if content_for?(:jumbotron) %>
+        <div class="jumbotron">
+          <div class="container">
+            <%= yield :jumbotron %>
+          </div>
+        </div>
+    <% end %>
+<% else %>
+    <div class="container">
+<% end %>
+
 <%= yield %>
 
+<footer>
+  <hr>
+  <p class="pull-right">
+    <%= link_to '<span class="glyphicon-class glyphicon glyphicon-chevron-up"></span> Back to top'.html_safe, '#Top' %>
+  </p>
+  <p>
+    &copy; <%= Time.now.year %> <%= ENV["LABACRONYM"] %>
+    &bull;
+    <%= link_to "Privacy", privacy_path %></li>
+    &bull;
+    <%= link_to "Terms", terms_path %></li>
+  </p>
+</footer>
+</div> <!-- /container -->
+
+
+<script src="//netdna.bootstrapcdn.com/bootstrap/<%= ENV["BOOTSTRAP_VERSION"] %>/js/bootstrap.min.js"></script>
 </body>
+
 </html>

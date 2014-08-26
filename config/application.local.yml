@@ -1,0 +1,17 @@
+# config/application.local.yml
+
+defaults: &defaults
+  LABNAME: "Networked and Embedded Systems Laboratory"
+  LABACRONYM: "NESL"
+  UNIVNAME: "University of California, Los Angeles"
+  UNIVACRONYM: "UCLA"
+  BOOTSTRAP_VERSION: "3.2.0"
+  META_DESCRIPTION: "This is website for NESL @ UCLA generated using LabWeb app"
+  META_AUTHOR: "Mani Srivastava"
+  META_KEYWORDS: "CS, EE, Embedded Systems, Cyber-Physical Systems, Mobile Computing, Wireless Networking, Ubiquitous Computing, Pervasive Computing"
+
+development:
+  <<: *defaults
+
+test:
+  <<: *defaults

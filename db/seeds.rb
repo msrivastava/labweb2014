@@ -5,3 +5,8 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+WebPage.create(pagetitle: 'Home', bartitle: 'Home', body: 'introduction to lab', ispublic: true, url: '')
+WebPage.create(pagetitle: 'Privacy', bartitle: 'Privacy', body: 'privacy message', ispublic: true, url: '')
+WebPage.create(pagetitle: 'Terms', bartitle: 'Terms', body: 'usage terms', ispublic: true, url: '')
+WebPage.create(pagetitle: 'About', bartitle: 'About', body: 'text about lab', ispublic: true, url: '')
+
