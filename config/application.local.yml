@@ -3,12 +3,21 @@
 defaults: &defaults
   LABNAME: "Networked and Embedded Systems Laboratory"
   LABACRONYM: "NESL"
+  LABURL: "http://nesl.ee.ucla.edu"
+  LABMAILADDRESS: "UCLA<br>EE Department<br>420 Westwood Plaza<br>MC# 951594<br>Los Angeles, CA 90095-1594<br>ATTN: 56-125KK, EEIV<br>C/O: Fe Asuncion"
+  LABFAX: "310-825-7928"
+  LABLOCATION: "1762 Boelter Hall<br>UCLA Main Campus"
   UNIVNAME: "University of California, Los Angeles"
   UNIVACRONYM: "UCLA"
+  UNIVURL: "http://www.ucla.edu"
   BOOTSTRAP_VERSION: "3.2.0"
   META_DESCRIPTION: "This is website for NESL @ UCLA generated using LabWeb app"
   META_AUTHOR: "Mani Srivastava"
   META_KEYWORDS: "CS, EE, Embedded Systems, Cyber-Physical Systems, Mobile Computing, Wireless Networking, Ubiquitous Computing, Pervasive Computing"
+  MAINTAINER_LAST: "Srivastava"
+  MAINTAINER_FIRST: "Mani"
+  YEARONE: "1985"
+  PERSON_DISPLAY_RELATIONSHIP_THRESHOLD: 4
 
 development:
   <<: *defaults

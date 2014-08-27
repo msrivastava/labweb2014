@@ -1,39 +1,51 @@
 <% provide(:title, 'Projects') %>
 
-<h1>Listing projects</h1>
+<br>
+<div class="panel panel-default">
+  <!-- Default panel contents -->
+  <div class="panel-heading">
+    <h1 class="panel-title">Projects @ <%= ENV["LABACRONYM"]%></h1>
+  </div>
 
-<table>
-  <thead>
+  <div class="panel-body">
+  <!-- Table -->
+  <table class="table">
+    <thead>
     <tr>
       <th>Name</th>
       <th>Title</th>
-      <th>Description</th>
-      <th>Isactive</th>
-      <th>Url</th>
-      <th>Miscattributes</th>
-      <th>Main research area</th>
-      <th colspan="3"></th>
+      <th>Status</th>
+      <% if user_signed_in? && current_user.admin? %>
+          <th colspan="3"></th>
+      <% else %>
+          <th colspan="1"></th>
+      <% end %>
     </tr>
-  </thead>
+    </thead>
 
-  <tbody>
+    <tbody>
     <% @projects.each do |project| %>
-      <tr>
-        <td><%= project.name %></td>
-        <td><%= project.title %></td>
-        <td><%= project.description %></td>
-        <td><%= project.isactive %></td>
-        <td><%= project.url %></td>
-        <td><%= project.miscattributes %></td>
-        <td><%= project.main_research_area %></td>
-        <td><%= link_to 'Show', project %></td>
-        <td><%= link_to 'Edit', edit_project_path(project) %></td>
-        <td><%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+        <tr>
+          <td><%= project.name %></td>
+          <td><%= project.title %></td>
+          <td><%= project.isactive %></td>
+          <td><%= link_to 'Show', project %></td>
+          <% if user_signed_in? && current_user.admin? %>
+              <td><%= link_to 'Edit', edit_project_path(project) %></td>
+              <td><%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <% end %>
+        </tr>
     <% end %>
-  </tbody>
-</table>
+    </tbody>
+  </table>
+  </div>
 
-<br>
 
-<%= link_to 'New Project', new_project_path %>
+  <div class="panel-footer">
+    <% if user_signed_in? %>
+        <% if current_user.admin? %>
+            <%= link_to 'New Project', new_project_path %>
+        <% end %>
+    <% end %>
+  </div>
+</div>

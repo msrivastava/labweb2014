@@ -1,121 +1,51 @@
 <% provide(:title, 'People') %>
+<br>
+<div class="panel panel-default">
+  <!-- Default panel contents -->
+  <div class="panel-heading">
+    <h1 class="panel-title">People @ <%= ENV["LABACRONYM"]%></h1>
+  </div>
 
-<h1>Listing people</h1>
+  <div class="panel-body">
 
-<table>
-  <thead>
+  <!-- Table -->
+  <table class="table">
+    <thead>
     <tr>
       <th>Lastname</th>
       <th>Firstname</th>
-      <th>Middleinitial</th>
-      <th>Webname</th>
-      <th>Email</th>
-      <th>Url</th>
-      <th>Urlphoto</th>
-      <th>Phonework</th>
-      <th>Phonehome</th>
-      <th>Phonecell</th>
-      <th>Fax</th>
-      <th>Addressoffice</th>
-      <th>Addresslab</th>
-      <th>Addressmail</th>
-      <th>Department</th>
-      <th>Urldepartment</th>
-      <th>Organization</th>
-      <th>Urlorganization</th>
-      <th>Biography</th>
-      <th>Researchinterests</th>
-      <th>Education</th>
-      <th>Professionalexperience</th>
-      <th>Professionalservice</th>
-      <th>Otherpublications</th>
-      <th>Patents</th>
-      <th>Awards</th>
-      <th>Skills</th>
-      <th>Interests</th>
-      <th>Secretary</th>
-      <th>Bs year</th>
-      <th>Bs title</th>
-      <th>Bs school</th>
-      <th>Bs field</th>
-      <th>Bs in lab</th>
-      <th>Ms year</th>
-      <th>Ms title</th>
-      <th>Ms school</th>
-      <th>Ms field</th>
-      <th>Ms thesis</th>
-      <th>Ms in lab</th>
-      <th>Phd year</th>
-      <th>Phd title</th>
-      <th>Phd school</th>
-      <th>Phd field</th>
-      <th>Phd thesis</th>
-      <th>Phd in lab</th>
-      <th>Miscattributes</th>
-      <th>Person category</th>
-      <th colspan="3"></th>
+      <th>Position</th>
+      <% if user_signed_in? && current_user.admin? %>
+          <th colspan="3"></th>
+      <% else %>
+          <th colspan="1"></th>
+      <% end %>
     </tr>
-  </thead>
+    </thead>
 
-  <tbody>
+    <tbody>
     <% @people.each do |person| %>
-      <tr>
-        <td><%= person.lastname %></td>
-        <td><%= person.firstname %></td>
-        <td><%= person.middleinitial %></td>
-        <td><%= person.webname %></td>
-        <td><%= person.email %></td>
-        <td><%= person.url %></td>
-        <td><%= person.urlphoto %></td>
-        <td><%= person.phonework %></td>
-        <td><%= person.phonehome %></td>
-        <td><%= person.phonecell %></td>
-        <td><%= person.fax %></td>
-        <td><%= person.addressoffice %></td>
-        <td><%= person.addresslab %></td>
-        <td><%= person.addressmail %></td>
-        <td><%= person.department %></td>
-        <td><%= person.urldepartment %></td>
-        <td><%= person.organization %></td>
-        <td><%= person.urlorganization %></td>
-        <td><%= person.biography %></td>
-        <td><%= person.researchinterests %></td>
-        <td><%= person.education %></td>
-        <td><%= person.professionalexperience %></td>
-        <td><%= person.professionalservice %></td>
-        <td><%= person.otherpublications %></td>
-        <td><%= person.patents %></td>
-        <td><%= person.awards %></td>
-        <td><%= person.skills %></td>
-        <td><%= person.interests %></td>
-        <td><%= person.secretary %></td>
-        <td><%= person.bs_year %></td>
-        <td><%= person.bs_title %></td>
-        <td><%= person.bs_school %></td>
-        <td><%= person.bs_field %></td>
-        <td><%= person.bs_in_lab %></td>
-        <td><%= person.ms_year %></td>
-        <td><%= person.ms_title %></td>
-        <td><%= person.ms_school %></td>
-        <td><%= person.ms_field %></td>
-        <td><%= person.ms_thesis %></td>
-        <td><%= person.ms_in_lab %></td>
-        <td><%= person.phd_year %></td>
-        <td><%= person.phd_title %></td>
-        <td><%= person.phd_school %></td>
-        <td><%= person.phd_field %></td>
-        <td><%= person.phd_thesis %></td>
-        <td><%= person.phd_in_lab %></td>
-        <td><%= person.miscattributes %></td>
-        <td><%= person.person_category %></td>
-        <td><%= link_to 'Show', person %></td>
-        <td><%= link_to 'Edit', edit_person_path(person) %></td>
-        <td><%= link_to 'Destroy', person, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+        <tr>
+          <td><%= person.lastname %></td>
+          <td><%= person.firstname %></td>
+          <td><%= person.person_category %></td>
+          <td><%= link_to 'Show', person %></td>
+          <% if user_signed_in? && current_user.admin? %>
+              <td><%= link_to 'Edit', edit_person_path(person) %></td>
+              <td><%= link_to 'Destroy', person, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <% end %>
+        </tr>
     <% end %>
-  </tbody>
-</table>
+    </tbody>
+  </table>
+  </div>
 
-<br>
+  <div class="panel-footer">
+    <% if user_signed_in? %>
+        <% if current_user.admin? %>
+            <%= link_to 'New Person', new_person_path %>
+        <% end %>
+    <% end %>
+  </div>
+</div>
 
-<%= link_to 'New Person', new_person_path %>
