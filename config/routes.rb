@@ -1,9 +1,11 @@
 Rails.application.routes.draw do
-  devise_for :users
   get '/home'    => 'web_pages#show', id: 1
   get '/privacy'    => 'web_pages#show', id: 2
   get '/terms'    => 'web_pages#show', id: 3
   get '/about'    => 'web_pages#show', id: 4
+
+  devise_for :users
+  resources :users
 
   resources :product_person_maps
 
