@@ -3,7 +3,7 @@ class CreateProjects < ActiveRecord::Migration
     create_table :projects do |t|
       t.string :name, null: false
       t.string :title, null: false
-      t.string :description
+      t.text :description
       t.boolean :isactive, null: false, default: true
       t.string :url
       t.hstore :miscattributes

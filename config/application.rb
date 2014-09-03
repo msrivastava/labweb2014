@@ -28,5 +28,9 @@ module Labweb20141
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
     config.autoload_paths += %W(#{config.root}/app)
+
+    #change your schema dump format from ruby to sql as the schema for hstore can't be represented by ruby.
+    #http://jes.al/2013/11/using-postgres-hstore-rails4/
+    config.active_record.schema_format = :sql
   end
 end

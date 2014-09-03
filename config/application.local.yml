@@ -17,7 +17,54 @@ defaults: &defaults
   MAINTAINER_LAST: "Srivastava"
   MAINTAINER_FIRST: "Mani"
   YEARONE: "1985"
-  PERSON_DISPLAY_RELATIONSHIP_THRESHOLD: 4
+  PEOPLE_DISPLAY_ORDER: '[
+    "Faculty",
+    "Staff",
+    "Administrative Staff",
+    "Technical Staff",
+    "Post Doc",
+    "PhD Student",
+    "MS Student",
+    "UG Student",
+    "Student",
+    "Visiting Faculty",
+    "Visiting Researcher",
+    "Visiting PhD Student",
+    "Visiting MS Student",
+    "Visiting UG Student",
+    "Visiting K12 Student",
+    "Visitor",
+    "PhD Intern",
+    "MS Intern",
+    "UG Intern",
+    "K12 Intern",
+    "Intern",
+    "Collaborator",
+    "Former Collaborator",
+    "Former Faculty",
+    "Former Administrative Staff",
+    "Former Technical Staff",
+    "Former Staff",
+    "Former Post Doc",
+    "Alum PhD Student",
+    "Alum MS Student",
+    "Alum UG Student",
+    "Alum",
+    "Former Visiting Faculty",
+    "Former Visiting Researcher",
+    "Former Visiting PhD Student",
+    "Former Visiting MS Student",
+    "Former Visiting UG Student",
+    "Former Visiting K12 Student",
+    "Former Visitor",
+    "Former PhD Intern",
+    "Former MS Intern",
+    "Former UG Intern",
+    "Former K12 Intern",
+    "Former Intern",
+    "Coauthor",
+    "Other"
+  ]'
 
 development:
   <<: *defaults

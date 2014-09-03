@@ -35,7 +35,7 @@
             <td><%= course.description %></td>
             <td><%= course.url %></td>
             <td><%= course.crosslistings %></td>
-            <td><%= link_to 'Show', project %></td>
+            <td><%= link_to 'Show', course %></td>
             <% if user_signed_in? && current_user.admin? %>
                 <td><%= link_to 'Edit', edit_course_path(course) %></td>
                 <td><%= link_to 'Destroy', course, method: :delete, data: { confirm: 'Are you sure?' } %></td>

@@ -1,4 +1,5 @@
 class Person < ActiveRecord::Base
+  store_accessor :miscattributes, :key1, :key2
   belongs_to :person_category
   has_many :document_person_maps
   has_many :documents, :through => :document_person_maps

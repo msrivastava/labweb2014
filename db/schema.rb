@@ -115,7 +115,7 @@ ActiveRecord::Schema.define(version: 20140826225813) do
   create_table "grants", force: true do |t|
     t.string   "name",                                 null: false
     t.string   "title",                                null: false
-    t.string   "description"
+    t.text     "description"
     t.boolean  "isactive",              default: true, null: false
     t.string   "url"
     t.date     "startdate"
@@ -282,7 +282,7 @@ ActiveRecord::Schema.define(version: 20140826225813) do
   create_table "projects", force: true do |t|
     t.string   "name",                                 null: false
     t.string   "title",                                null: false
-    t.string   "description"
+    t.text     "description"
     t.boolean  "isactive",              default: true, null: false
     t.string   "url"
     t.hstore   "miscattributes"

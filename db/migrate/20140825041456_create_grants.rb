@@ -3,7 +3,7 @@ class CreateGrants < ActiveRecord::Migration
     create_table :grants do |t|
       t.string :name, null: false
       t.string :title, null: false
-      t.string :description
+      t.text :description
       t.boolean :isactive, null: false, default: true
       t.string :url
       t.date :startdate
