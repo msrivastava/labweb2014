@@ -8,11 +8,11 @@
 
   <div class="panel-body">
 
-  <% PersonCategory.all().each do |person_category| %>
+  <% eval(ENV["PEOPLE_DISPLAY_ORDER"]).each do |person_category| %>
     <table class="table">
       <thead>
         <tr>
-          <th><%= person_category.name %></th>
+          <th><%= person_category %></th>
         </tr>
       </thead>
     </table>
